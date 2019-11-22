@@ -42,14 +42,14 @@ void freeLink(LinkNode *head) {
     LinkNode *currentNode = head;
     LinkNode *next = currentNode->next;
     while (currentNode != NULL) {
+        next = next->next;
         free(currentNode);
         currentNode = NULL;
-        if (next != NULL) {
-            currentNode = next;
-            next = next->next;
-        }
+        currentNode = next;
     }
     head = NULL;
+    currentNode = NULL;
+    next = NULL;
 }
 
 void printLinkNode(LinkNode *head) {
