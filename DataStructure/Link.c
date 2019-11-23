@@ -7,57 +7,58 @@
 //
 
 #include "Link.h"
+#include <stdlib.h>
 
-LinkNode *findNode(LinkNode *head, int k) {
+Node *findNode(Node *head, int k) {
+    if (k < 0 || head == NULL) return NULL;
+    Node *tempNode = head;
     int i = 0;
-    if (i == k) return head;
-    LinkNode *tempNode = head->next;
-    i++;
-    while (i <= k && tempNode) {
+    while (i <= k && tempNode != NULL) {
         if (i == k) break;
         tempNode = tempNode -> next;
         i++;
     }
-    if (tempNode) return tempNode;
+    if (tempNode != NULL) return tempNode;
     return NULL;
 }
 
-LinkNode *createLinkNode(int count) {
+Node *createLinkNode(int count) {
     if (count < 0) return NULL;
-    LinkNode *head = (LinkNode*)malloc(sizeof(LinkNode));
-    head->data = 0;
-    head->next = NULL;
-    LinkNode *currentNode = head;
-    for (int i = 1;i < count;i++) {
-        LinkNode *node = (LinkNode*)malloc(sizeof(LinkNode));
+    Node *currentNode = NULL, *head = NULL;
+    for (int i = 0;i < count;i++) {
+        Node *node = (Node*)malloc(sizeof(Node));
         node->data = i;
         node->next = NULL;
-        currentNode->next = node;
+        // node is the first node(head) in the link.
+        if (currentNode == NULL) {
+            head = node;
+        } else {
+            currentNode->next = node;
+        }
         currentNode = node;
     }
     return head;
 }
 
-void freeLink(LinkNode *head) {
-    LinkNode *currentNode = head;
-    LinkNode *next = currentNode->next;
-    while (currentNode != NULL) {
-        next = next->next;
-        free(currentNode);
-        currentNode = NULL;
+void freeLink(Node **head) {
+    Node **currentNode = head, **next = NULL;
+    while (*currentNode != NULL) {
+        if ((*currentNode)->next != NULL) next = &((*currentNode)->next);
+        free(*currentNode);
+        *currentNode = NULL;
         currentNode = next;
     }
-    head = NULL;
-    currentNode = NULL;
-    next = NULL;
+    *head = NULL;
+    *currentNode = NULL;
+    *next = NULL;
 }
 
-void printLinkNode(LinkNode *head) {
+void printLinkNode(Node *head) {
     if (head == NULL) {
         printf("Empty link!!!\n");
         return;
     }
-    LinkNode *next = head;
+    Node *next = head;
     while (next != NULL) {
         printf("value: %d \t", next->data);
         next = next->next;

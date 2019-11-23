@@ -10,19 +10,18 @@
 #define Link_h
 
 #include <stdio.h>
-#include <stdlib.h>
 
-typedef struct LinkNode {
+typedef struct Node {
     int data;
-    struct LinkNode *next;
-}LinkNode;
+    struct Node *next;
+}Node;
 
-LinkNode *findNode(LinkNode *linkHead, int k);
+Node *findNode(Node *linkHead, int k);
 
-LinkNode *createLinkNode(int count);
+Node *createLinkNode(int count);
 
-void printLinkNode(LinkNode *head);
+void printLinkNode(Node *head);
 
-void freeLink(LinkNode *head);
+void freeLink(Node **head);
 
 #endif /* Link_h */

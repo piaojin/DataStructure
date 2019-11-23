@@ -7,13 +7,12 @@
 //
 
 #include <stdio.h>
-#include <stdlib.h>
 #include "Link.h"
 
 int main(int argc, const char * argv[]) {
-    LinkNode *head = createLinkNode(3);
+    Node *head = createLinkNode(10);
     printLinkNode(head);
-    freeLink(head);
+    freeLink(&head);
     printLinkNode(head);
     return 0;
 }
