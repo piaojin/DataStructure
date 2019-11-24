@@ -16,12 +16,20 @@ typedef struct Node {
     struct Node *next;
 }Node;
 
-Node *findNode(Node *linkHead, int k);
-
 Node *createLinkNode(int count);
+
+void freeLinkNode(Node **head);
 
 void printLinkNode(Node *head);
 
-void freeLink(Node **head);
+int insertNode(Node **head, int newData, int index);
+
+int appendNode(Node *head, int newData);
+
+int removeNode(Node **head, int k);
+
+Node *findNode(Node *head, int k);
+
+int nodeCount(Node *head);
 
 #endif /* Link_h */
