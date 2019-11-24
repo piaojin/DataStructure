@@ -28,16 +28,16 @@ Node *createLinkNode(int count) {
 }
 
 void freeLinkNode(Node **head) {
-    Node **currentNode = head, **next = NULL;
-    while (*currentNode != NULL) {
-        if ((*currentNode)->next != NULL) next = &((*currentNode)->next);
-        free(*currentNode);
-        *currentNode = NULL;
+    Node *currentNode = *head, *next = NULL;
+    while (currentNode != NULL) {
+        next = currentNode->next;
+        free(currentNode);
+        currentNode = NULL;
         currentNode = next;
     }
     *head = NULL;
-    *currentNode = NULL;
-    *next = NULL;
+    currentNode = NULL;
+    next = NULL;
 }
 
 int insertNode(Node **head, int newData, int index) {
