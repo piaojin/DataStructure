@@ -11,10 +11,7 @@
 
 #include <stdio.h>
 
-typedef struct Node {
-    int data;
-    struct Node *next;
-}Node;
+typedef struct Node Node;
 
 int isLastNode(Node *node, Node *head);
 
