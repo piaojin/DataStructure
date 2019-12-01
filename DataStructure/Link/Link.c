@@ -9,6 +9,33 @@
 #include "Link.h"
 #include <stdlib.h>
 
+int isLastNode(Node *node, Node *head) {
+    return node != NULL && node->next == NULL;
+}
+
+void removeNode(int data, Node **head) {
+    if (data == (*head)->data) {
+        free(*head);
+        *head = NULL;
+        return;
+    }
+    Node *node = findPreviousNode(data, *head);
+    if (node != NULL && !isLastNode(node, *head)) {
+        Node *tempNode = node->next;
+        node->next = tempNode->next;
+        free(tempNode);
+        tempNode = NULL;
+    }
+}
+
+Node *findPreviousNode(int data, Node *head) {
+    Node *next = head;
+    while (next != NULL && next->next->data != data) {
+        next = next->next;
+    }
+    return next;
+}
+
 Node *createLinkNode(int count) {
     if (count < 0) return NULL;
     Node *currentNode = NULL, *head = NULL;
@@ -87,40 +114,14 @@ int appendNode(Node *head, int newData) {
     return i;
 }
 
-int removeNode(Node **head, int k) {
-    if (k < 0 || *head == NULL || k > nodeCount(*head) - 1) return -1;
-    Node *next = *head;
-    if (k == 0) {
-        // remove head node
-        next = next->next;
-        free(*head);
-        *head = next;
-        return 1;
+Node *findNode(int data, Node *head) {
+    if (head == NULL) return NULL;
+    if (data == head->data) return head;
+    Node *node = head->next;
+    while (node != NULL && node->data != data) {
+        node = node->next;
     }
-    for (int i = 0; next != NULL; i++) {
-        if (i == k - 1) {
-            Node *willRemoveNode = next->next;
-            next->next = willRemoveNode->next;
-            free(willRemoveNode);
-            willRemoveNode = NULL;
-            break;
-        }
-        next = next->next;
-    }
-    return 1;
-}
-
-Node *findNode(Node *head, int k) {
-    if (k < 0 || head == NULL) return NULL;
-    Node *tempNode = head;
-    int i = 0;
-    while (i <= k && tempNode != NULL) {
-        if (i == k) break;
-        tempNode = tempNode -> next;
-        i++;
-    }
-    if (tempNode != NULL) return tempNode;
-    return NULL;
+    return node;
 }
 
 void printLinkNode(Node *head) {

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CA0169862384411C007EE15F /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0169852384411C007EE15F /* main.c */; };
 		CA01698E23844246007EE15F /* Link.c in Sources */ = {isa = PBXBuildFile; fileRef = CA01698D23844246007EE15F /* Link.c */; };
+		CA6F55372392ADCF004FA035 /* Stack.c in Sources */ = {isa = PBXBuildFile; fileRef = CA6F55362392ADCF004FA035 /* Stack.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		CA0169852384411C007EE15F /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		CA01698C23844246007EE15F /* Link.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Link.h; sourceTree = "<group>"; };
 		CA01698D23844246007EE15F /* Link.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Link.c; sourceTree = "<group>"; };
+		CA6F55352392ADCF004FA035 /* Stack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		CA6F55362392ADCF004FA035 /* Stack.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Stack.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +63,29 @@
 		CA0169842384411C007EE15F /* DataStructure */ = {
 			isa = PBXGroup;
 			children = (
+				CA6F55342392AD8E004FA035 /* Stack */,
+				CA47A7A1238D549D002A6CA4 /* Link */,
 				CA0169852384411C007EE15F /* main.c */,
+			);
+			path = DataStructure;
+			sourceTree = "<group>";
+		};
+		CA47A7A1238D549D002A6CA4 /* Link */ = {
+			isa = PBXGroup;
+			children = (
 				CA01698C23844246007EE15F /* Link.h */,
 				CA01698D23844246007EE15F /* Link.c */,
 			);
-			path = DataStructure;
+			path = Link;
+			sourceTree = "<group>";
+		};
+		CA6F55342392AD8E004FA035 /* Stack */ = {
+			isa = PBXGroup;
+			children = (
+				CA6F55352392ADCF004FA035 /* Stack.h */,
+				CA6F55362392ADCF004FA035 /* Stack.c */,
+			);
+			path = Stack;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA6F55372392ADCF004FA035 /* Stack.c in Sources */,
 				CA0169862384411C007EE15F /* main.c in Sources */,
 				CA01698E23844246007EE15F /* Link.c in Sources */,
 			);
