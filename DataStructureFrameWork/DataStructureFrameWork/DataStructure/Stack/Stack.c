@@ -7,28 +7,23 @@
 //
 
 #include "Stack.h"
-#include <errno.h>
 #include <stdlib.h>
+#include "DataStructure.h"
 
 #define EmptyTOS -1
 #define MinStackSize 5
 
-typedef struct StackRecord {
+struct StackRecord {
     int size;
     int topOfStack;
-    ElementType *array;
-} StackRecord;
+    StackElementType *array;
+};
 
-void error(char *c) {
-    perror(c);
-    exit(EXIT_FAILURE);
-}
-
-int isEmpty(Stack s) {
+int isStackEmpty(Stack s) {
     return s->topOfStack == EmptyTOS;
 }
 
-int isFull(Stack s) {
+int isStackFull(Stack s) {
     return s->topOfStack == s->size - 1;
 }
 
@@ -42,12 +37,12 @@ Stack createStack(int maxElements) {
     if (s == NULL) {
         error("Out of space.");
     }
-    s->array = malloc(sizeof(ElementType) * maxElements);
+    s->array = malloc(sizeof(StackElementType) * maxElements);
     if (s->array == NULL) {
         error("Out of space.");
     }
     s->size = maxElements;
-    makeEmpty(s);
+    makeStackEmpty(s);
     return s;
 }
 
@@ -62,35 +57,35 @@ void disposeStack(Stack s) {
     }
 }
 
-void makeEmpty(Stack s) {
+void makeStackEmpty(Stack s) {
     s->topOfStack = EmptyTOS;
 }
 
-void push(ElementType element, Stack s) {
-    if (isFull(s)) {
+void pushStack(StackElementType element, Stack s) {
+    if (isStackFull(s)) {
         error("Full stack.");
     } else {
         s->array[++s->topOfStack] = element;
     }
 }
 
-ElementType top(Stack s) {
-    if (!isEmpty(s)) {
+StackElementType topStack(Stack s) {
+    if (!isStackEmpty(s)) {
         return s->array[s->topOfStack];
     }
     error("Empty stack.");
     return 0; /**Return value used to aovid warning*/
 }
 
-void pop(Stack s) {
-    if (isEmpty(s)) {
+void popStack(Stack s) {
+    if (isStackEmpty(s)) {
         error("Empty stack.");
     }
     s->topOfStack--; /**Won't remove the element and only change topOfStack.*/
 }
 
-ElementType topAndPop(Stack s) {
-    if (!isEmpty(s)) {
+StackElementType topAndPopStack(Stack s) {
+    if (!isStackEmpty(s)) {
         return s->array[s->topOfStack--];
     }
     error("Empty stack.");

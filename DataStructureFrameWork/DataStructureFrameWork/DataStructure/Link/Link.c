@@ -9,10 +9,10 @@
 #include "Link.h"
 #include <stdlib.h>
 
-typedef struct Node {
+struct Node {
     int data;
     struct Node *next;
-}Node;
+};
 
 int isLastNode(Node *node, Node *head) {
     return node != NULL && node->next == NULL;

@@ -15,6 +15,10 @@
 		767F684E2393F0DE005AC898 /* Stack.c in Sources */ = {isa = PBXBuildFile; fileRef = 767F68492393F0DE005AC898 /* Stack.c */; };
 		767F684F2393F0DE005AC898 /* Stack.h in Headers */ = {isa = PBXBuildFile; fileRef = 767F684A2393F0DE005AC898 /* Stack.h */; };
 		767F68512393F283005AC898 /* LinkTestCases.m in Sources */ = {isa = PBXBuildFile; fileRef = 767F68502393F283005AC898 /* LinkTestCases.m */; };
+		7691D73423955CA8000A7B64 /* Queue.h in Headers */ = {isa = PBXBuildFile; fileRef = 7691D73223955CA8000A7B64 /* Queue.h */; };
+		7691D73523955CA8000A7B64 /* Queue.c in Sources */ = {isa = PBXBuildFile; fileRef = 7691D73323955CA8000A7B64 /* Queue.c */; };
+		7691D73823956216000A7B64 /* DataStructure.h in Headers */ = {isa = PBXBuildFile; fileRef = 7691D73623956216000A7B64 /* DataStructure.h */; };
+		7691D73923956216000A7B64 /* DataStructure.c in Sources */ = {isa = PBXBuildFile; fileRef = 7691D73723956216000A7B64 /* DataStructure.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +43,10 @@
 		767F68492393F0DE005AC898 /* Stack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Stack.c; sourceTree = "<group>"; };
 		767F684A2393F0DE005AC898 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
 		767F68502393F283005AC898 /* LinkTestCases.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkTestCases.m; sourceTree = "<group>"; };
+		7691D73223955CA8000A7B64 /* Queue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
+		7691D73323955CA8000A7B64 /* Queue.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Queue.c; sourceTree = "<group>"; };
+		7691D73623956216000A7B64 /* DataStructure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataStructure.h; sourceTree = "<group>"; };
+		7691D73723956216000A7B64 /* DataStructure.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = DataStructure.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +109,11 @@
 		767F68432393F0DE005AC898 /* DataStructure */ = {
 			isa = PBXGroup;
 			children = (
+				7691D72F23955C6B000A7B64 /* Queue */,
 				767F68452393F0DE005AC898 /* Link */,
 				767F68482393F0DE005AC898 /* Stack */,
+				7691D73623956216000A7B64 /* DataStructure.h */,
+				7691D73723956216000A7B64 /* DataStructure.c */,
 			);
 			path = DataStructure;
 			sourceTree = "<group>";
@@ -125,6 +136,15 @@
 			path = Stack;
 			sourceTree = "<group>";
 		};
+		7691D72F23955C6B000A7B64 /* Queue */ = {
+			isa = PBXGroup;
+			children = (
+				7691D73223955CA8000A7B64 /* Queue.h */,
+				7691D73323955CA8000A7B64 /* Queue.c */,
+			);
+			path = Queue;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -134,7 +154,9 @@
 			files = (
 				767F684F2393F0DE005AC898 /* Stack.h in Headers */,
 				767F684D2393F0DE005AC898 /* Link.h in Headers */,
+				7691D73423955CA8000A7B64 /* Queue.h in Headers */,
 				767F683A2393F0BE005AC898 /* DataStructureFrameWork.h in Headers */,
+				7691D73823956216000A7B64 /* DataStructure.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,8 +257,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7691D73523955CA8000A7B64 /* Queue.c in Sources */,
 				767F684E2393F0DE005AC898 /* Stack.c in Sources */,
 				767F684C2393F0DE005AC898 /* Link.c in Sources */,
+				7691D73923956216000A7B64 /* DataStructure.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
