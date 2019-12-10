@@ -14,11 +14,12 @@
 		767F684D2393F0DE005AC898 /* Link.h in Headers */ = {isa = PBXBuildFile; fileRef = 767F68472393F0DE005AC898 /* Link.h */; };
 		767F684E2393F0DE005AC898 /* Stack.c in Sources */ = {isa = PBXBuildFile; fileRef = 767F68492393F0DE005AC898 /* Stack.c */; };
 		767F684F2393F0DE005AC898 /* Stack.h in Headers */ = {isa = PBXBuildFile; fileRef = 767F684A2393F0DE005AC898 /* Stack.h */; };
-		767F68512393F283005AC898 /* LinkTestCases.m in Sources */ = {isa = PBXBuildFile; fileRef = 767F68502393F283005AC898 /* LinkTestCases.m */; };
+		767F68512393F283005AC898 /* LinkTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 767F68502393F283005AC898 /* LinkTestCase.m */; };
 		7691D73423955CA8000A7B64 /* Queue.h in Headers */ = {isa = PBXBuildFile; fileRef = 7691D73223955CA8000A7B64 /* Queue.h */; };
 		7691D73523955CA8000A7B64 /* Queue.c in Sources */ = {isa = PBXBuildFile; fileRef = 7691D73323955CA8000A7B64 /* Queue.c */; };
 		7691D73823956216000A7B64 /* DataStructure.h in Headers */ = {isa = PBXBuildFile; fileRef = 7691D73623956216000A7B64 /* DataStructure.h */; };
 		7691D73923956216000A7B64 /* DataStructure.c in Sources */ = {isa = PBXBuildFile; fileRef = 7691D73723956216000A7B64 /* DataStructure.c */; };
+		CA6F5539239FF29A004FA035 /* QueueTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6F5538239FF29A004FA035 /* QueueTestCase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +43,12 @@
 		767F68472393F0DE005AC898 /* Link.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Link.h; sourceTree = "<group>"; };
 		767F68492393F0DE005AC898 /* Stack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Stack.c; sourceTree = "<group>"; };
 		767F684A2393F0DE005AC898 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
-		767F68502393F283005AC898 /* LinkTestCases.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkTestCases.m; sourceTree = "<group>"; };
+		767F68502393F283005AC898 /* LinkTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkTestCase.m; sourceTree = "<group>"; };
 		7691D73223955CA8000A7B64 /* Queue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
 		7691D73323955CA8000A7B64 /* Queue.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Queue.c; sourceTree = "<group>"; };
 		7691D73623956216000A7B64 /* DataStructure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataStructure.h; sourceTree = "<group>"; };
 		7691D73723956216000A7B64 /* DataStructure.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = DataStructure.c; sourceTree = "<group>"; };
+		CA6F5538239FF29A004FA035 /* QueueTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QueueTestCase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +103,8 @@
 			children = (
 				767F68372393F0BE005AC898 /* DataStructureFrameWorkTests.m */,
 				767F68392393F0BE005AC898 /* Info.plist */,
-				767F68502393F283005AC898 /* LinkTestCases.m */,
+				767F68502393F283005AC898 /* LinkTestCase.m */,
+				CA6F5538239FF29A004FA035 /* QueueTestCase.m */,
 			);
 			path = DataStructureFrameWorkTests;
 			sourceTree = "<group>";
@@ -269,7 +272,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				767F68382393F0BE005AC898 /* DataStructureFrameWorkTests.m in Sources */,
-				767F68512393F283005AC898 /* LinkTestCases.m in Sources */,
+				767F68512393F283005AC898 /* LinkTestCase.m in Sources */,
+				CA6F5539239FF29A004FA035 /* QueueTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

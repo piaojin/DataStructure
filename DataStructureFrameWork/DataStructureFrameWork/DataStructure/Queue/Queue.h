@@ -11,6 +11,8 @@
 
 #include <stdio.h>
 
+/**Using array to realize circular queue.*/
+
 typedef int QueueElementType;
 
 struct QueueRecord;
